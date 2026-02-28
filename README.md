@@ -1,102 +1,105 @@
-# Welcome to your Lovable project
+🍽️ Leftover2Meal – AI-Powered Smart Cooking App
+📌 Project Overview
 
-## Project info
+Leftover2Meal is a smart AI-powered web application that helps users create healthy and creative meals using ingredients already available in their fridge.
 
-**URL**: https://lovable.dev/projects/e422719d-e7cc-4b5d-b0e5-566a9f24825a
+Instead of browsing fixed recipes, the app dynamically generates personalized recipes using AI. It also supports dietary preferences, health goals, multilingual content, voice input, and authentication.
 
-## How can I edit this code?
+🚀 How to Run the Project Locally
+Prerequisites
 
-There are several ways of editing your application.
+Node.js (recommended via nvm)
 
-**Use Lovable**
+npm installed
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e422719d-e7cc-4b5d-b0e5-566a9f24825a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+Setup Steps
+# 1. Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# 2. Navigate into the project folder
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+The app will run with hot reload and instant preview.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🛠️ Technologies Used
 
-**Use GitHub Codespaces**
+Vite
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+React
 
-## What technologies are used for this project?
+TypeScript
 
-This project is built with:
+Tailwind CSS
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- Google Gemini AI (for AI-powered recipe suggestions)
+shadcn/ui
 
-## Environment Variables
+Google Gemini AI API
 
-To use the AI recipe finder feature with voice input and authentication, you need to set up API keys:
+Clerk Authentication
 
-1. **Clerk Authentication** (for user authentication):
-   - Sign up for a free account at [Clerk Dashboard](https://dashboard.clerk.com)
-   - Create a new application
-   - Go to **API Keys** section and copy your **Publishable Key**
-   - Create a `.env` file in the root directory
-   - Add: `VITE_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key_here`
+TanStack React Query
 
-2. **Gemini API Key** (for recipe generation):
-   - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Add to your `.env` file: `VITE_GEMINI_API_KEY=your_gemini_api_key_here`
+Web Speech API (Voice Commands)
 
-3. **Voice Input** (using browser Web Speech API):
-   - No API key required! The app uses the browser's built-in Web Speech API
-   - Works in Chrome, Edge, and Safari
-   - Requires microphone permission from the browser
+🔐 Environment Variables Setup
 
-4. **Complete `.env` file example**:
-   ```
-   VITE_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
-   VITE_GEMINI_API_KEY=your_gemini_api_key_here
-   ```
+Create a .env file in the root directory.
 
-5. Restart the development server after adding the keys
+Clerk Authentication (User Login)
 
-## How can I deploy this project?
+Create an account at Clerk
 
-Simply open [Lovable](https://lovable.dev/projects/e422719d-e7cc-4b5d-b0e5-566a9f24825a) and click on Share -> Publish.
+Create a new application
 
-## Can I connect a custom domain to my Lovable project?
+Copy the Publishable Key
 
-Yes, you can!
+Add to .env:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+VITE_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
+Google Gemini API (AI Recipe Generation)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Generate API key from Google AI Studio
+
+Add to .env:
+
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+Voice Input
+
+Uses browser’s built-in Web Speech API
+
+No API key required
+
+Works in Chrome, Edge, Safari
+
+Requires microphone permission
+
+📦 Example .env File
+VITE_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+
+⚠ Restart the dev server after adding environment variables.
+
+🌍 Deployment
+
+You can deploy using:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+Any Node-supported hosting service
+
+Build command:
+
+npm run build
+🌐 Custom Domain
+
+After deployment, configure a custom domain through your hosting provider's domain settings.
